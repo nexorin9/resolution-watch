@@ -1,0 +1,58 @@
+{
+  "resolutions": [
+    {
+      "resolution_id": "#[W41]01",
+      "title": "试点开展 DRG 入组校验",
+      "owner_department": "医务科",
+      "owner_id": "100086",
+      "due_at": "2026-10-08",
+      "acceptance": "骨科 3 个病组入组一致率 ≥ 95%",
+      "evidence_ref": ""
+    },
+    {
+      "resolution_id": "#[W41]02",
+      "title": "门诊电子病历升级",
+      "owner_department": "信息科",
+      "owner_id": "200002",
+      "due_at": "2026-10-13",
+      "acceptance": "门诊 5 个科室全部切换到 EMR 5.0",
+      "evidence_ref": ""
+    },
+    {
+      "resolution_id": "#[W41]03",
+      "title": "采购呼吸机 5 台",
+      "owner_department": "设备科",
+      "owner_id": "300003",
+      "due_at": "2026-11-10",
+      "acceptance": "5 台呼吸机到货验收",
+      "evidence_ref": ""
+    },
+    {
+      "resolution_id": "#[W41]04",
+      "title": "医保结算清单格式与流程优化",
+      "owner_department": "医保办",
+      "owner_id": "400004",
+      "due_at": "2026-10-05",
+      "acceptance": "医保结算清单按周生成",
+      "evidence_ref": ""
+    },
+    {
+      "resolution_id": "#[W41]05",
+      "title": "护理文书质控专项",
+      "owner_department": "护理部",
+      "owner_id": "500005",
+      "due_at": "2026-12-31",
+      "acceptance": "护理文书缺项率 ≤ 5%",
+      "evidence_ref": ""
+    },
+    {
+      "resolution_id": "#[W41]06",
+      "title": "年度能耗指标控制",
+      "owner_department": "后勤科",
+      "owner_id": "600006",
+      "due_at": "2026-12-20",
+      "acceptance": "单位面积能耗较去年下降 3%",
+      "evidence_ref": ""
+    }
+  ]
+}

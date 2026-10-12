@@ -1,0 +1,50 @@
+# 院内科室字典（决议抽取与字典命中校验用）
+# aliases 用于 fallback 解析时的命中扩展
+departments:
+  - code: yuanban
+    name: 院办
+    aliases: [院长办公室, 院长办, 院务办公室, 院务办]
+  - code: yiwuke
+    name: 医务科
+    aliases: [医务部, 医务处, 医政科]
+  - code: hulibu
+    name: 护理部
+    aliases: [护理学院, 护理管理处]
+  - code: xinxike
+    name: 信息科
+    aliases: [信息中心, IT 部, 信息处]
+  - code: caiwuke
+    name: 财务科
+    aliases: [财务部, 财务处, 计财科]
+  - code: yibaoban
+    name: 医保办
+    aliases: [医保管理处, 医保科]
+  - code: shebeike
+    name: 设备科
+    aliases: [设备处, 装备科, 医疗器械科]
+  - code: binganshi
+    name: 病案室
+    aliases: [病案科, 病案管理科]
+  - code: zhiguanban
+    name: 质管办
+    aliases: [质控办, 质量管理办公室, 质控科]
+  - code: houqin
+    name: 总务科
+    aliases: [后勤科, 总务处, 后勤保障科]
+  - code: yaofang
+    name: 药剂科
+    aliases: [药房, 药剂部, 药学部]
+  - code: gonghui
+    name: 工会
+    aliases: [工会办公室]
+  - code: ganbu
+    name: 人事科
+    aliases: [人事处, 人力资源科, 组织干部科]
+  - code: keyuan
+    name: 科教科
+    aliases: [科研教学科, 科教处]
+
+# 关键字提示（用于在 minutes.md 中识别 owner_id 工号、due_at 日期等）
+id_pattern: "\\b\\d{4,8}\\b"
+date_pattern: "\\d{4}-\\d{2}-\\d{2}"
+acceptance_keywords: [验收标准, 接受标准, 完成标准, 考核标准, 通过标准]

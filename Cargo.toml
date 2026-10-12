@@ -1,0 +1,72 @@
+[package]
+name = "resolution-watch"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "院务会决议督办台账 — 周频批处理 CLI + 导出包"
+license = "MIT"
+
+[lib]
+name = "resolution_watch"
+path = "src/lib.rs"
+
+[[bin]]
+name = "reso"
+path = "src/main.rs"
+
+[dependencies]
+# CLI 参数解析
+clap = { version = "4.5", features = ["derive", "env"] }
+
+# 异步 runtime
+tokio = { version = "1.40", features = ["macros", "rt-multi-thread", "sync", "time", "fs", "io-util"] }
+
+# 出站 HTTP（OA / LLM）
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "gzip"] }
+
+# 序列化
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+
+# JSON Schema 派生（决议条目 + OA 事件的 schema-first 类型化）
+schemars = { version = "0.8", features = ["chrono"] }
+
+# 本地缓存（决议推进表 + 周次幂等键）
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+# 时间（due_at / event_time / audit 时间戳）
+chrono = { version = "0.4", features = ["serde"] }
+
+# markdown 段落切分（deterministic_fallback 解析 minutes.md）
+pulldown-cmark = "0.10"
+
+# 错误与日志
+anyhow = "1.0"
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# sha256 校验和（导出包 manifest）
+sha2 = "0.10"
+
+# 正则（deterministic_fallback 解析会议纪要）
+regex = "1.10"
+
+# mock OA server（test 替身层；oa_pull::mock 内部用，crate-level always-compiled 以便
+# 集成测试 tests/oa_pull_mock.rs 直接 import）
+mockito = "1.5"
+
+[dev-dependencies]
+tempfile = "3.10"
+rstest = "0.23"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = "symbols"
+
+[profile.dev]
+opt-level = 0
+debug = 1

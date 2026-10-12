@@ -1,0 +1,54 @@
+# Runtime & secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Rust / cargo
+target/
+**/*.rs.bk
+.cargo/
+Cargo.lock.bak
+
+# Node
+node_modules/
+.next/
+.nuxt/
+dist/
+build/
+
+# Testing / cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage/
+.cache/
+
+# Sqlite / runtime data
+.reso_cache.sqlite
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# Logs / temp
+logs/
+*.log
+tmp/
+temp/
+*.tmp
+*.temp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Round metadata - never commit
+score.json
+discoveries.md
